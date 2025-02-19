@@ -12,7 +12,7 @@ function Sidebar() {
 
     return (
         <>
-            {/* Botón para abrir/cerrar sidebar en móviles */}
+            
             <button className="menu-button" onClick={toggleSidebar}>☰</button>
 
             <aside className={`sidebar ${isOpen ? "show" : ""}`}>
