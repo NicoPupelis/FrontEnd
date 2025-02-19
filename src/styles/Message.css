@@ -1,0 +1,28 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    width: fit-content;
+    max-width: 80%;
+  }
+  
+  .message__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #b0b0b0;
+  }
+  
+  .message__user {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .message__content {
+    margin-top: 4px;
+    color: #ddd;
+  }
+  

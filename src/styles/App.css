@@ -1,0 +1,86 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #19171d;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2f3136;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2d31;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Botones */
+.home-button, .back-button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #7289da;
+  transition: background 0.3s;
+}
+
+.home-button:hover, .back-button:hover {
+  background-color: #5b6eae;
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .chat-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+  }
+  .sidebar.show {
+    left: 0;
+  }
+  .chat-container {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  .chat-container {
+    width: 100%;
+  }
+}
